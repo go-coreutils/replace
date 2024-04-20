@@ -120,7 +120,11 @@ func (u *CUI) shutdownRunCLI() cenums.EventFlag {
 		}
 
 		if u.worker.ShowDiff {
-			u.notifier.Info(unified)
+			if u.worker.Quiet {
+				_, _ = u.notifier.Stdout().Write([]byte(unified))
+			} else {
+				u.notifier.Info(unified)
+			}
 		}
 	}
 
