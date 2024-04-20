@@ -57,11 +57,12 @@ func (u *CUI) shutdown(data []interface{}, argv ...interface{}) cenums.EventFlag
 
 func (u *CUI) shutdownRunMatchingFn(file string, matched bool, err error) {
 	if err != nil {
-		if u.worker.Verbose && errors.Is(err, rpl.ErrLargeFile) {
-			u.notifier.Error("# ignoring large file (max %v): %q\n", replace.MaxFileSizeLabel, file)
-		} else if u.worker.Verbose && errors.Is(err, rpl.ErrBinaryFile) {
-			u.notifier.Error("# ignoring binary file: %q\n", file)
-		} else {
+		switch {
+		case errors.Is(err, rpl.ErrLargeFile):
+			u.notifier.Debug("# ignoring large file (max %v): %q\n", replace.MaxFileSizeLabel, file)
+		case errors.Is(err, rpl.ErrBinaryFile):
+			u.notifier.Debug("# ignoring binary file: %q\n", file)
+		default:
 			u.notifier.Error("# error: %v - %q\n", err, file)
 		}
 		return
