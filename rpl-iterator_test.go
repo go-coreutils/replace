@@ -37,7 +37,7 @@ func TestIterator(t *testing.T) {
 		w.Recurse = true
 		w.IgnoreCase = true
 		err0 := w.Init()
-		err1 := w.InitTargets(nil)
+		err1 := w.InitTargets()
 		err2 := w.FindMatching(nil)
 		outData := string(outio.Data())
 		errData := string(errio.Data())

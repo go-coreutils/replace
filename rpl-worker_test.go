@@ -538,7 +538,7 @@ func TestWorker(t *testing.T) {
 			So(w.Notifier.Level(), ShouldEqual, notify.Info)
 			So(w.Notifier.Stdout(), ShouldEqual, outio.Writer())
 			So(w.Notifier.Stderr(), ShouldEqual, errio.Writer())
-			err1 := w.InitTargets(nil)
+			err1 := w.InitTargets()
 			So(err1, ShouldEqual, nil)
 		})
 
@@ -576,7 +576,7 @@ func TestWorker(t *testing.T) {
 			So(w.Notifier.Level(), ShouldEqual, notify.Info)
 			So(w.Notifier.Stdout(), ShouldEqual, outio.Writer())
 			So(w.Notifier.Stderr(), ShouldEqual, errio.Writer())
-			err1 := w.InitTargets(nil)
+			err1 := w.InitTargets()
 			So(err1, ShouldEqual, nil)
 		})
 
@@ -614,7 +614,7 @@ func TestWorker(t *testing.T) {
 			So(w.Notifier.Level(), ShouldEqual, notify.Info)
 			So(w.Notifier.Stdout(), ShouldEqual, outio.Writer())
 			So(w.Notifier.Stderr(), ShouldEqual, errio.Writer())
-			err1 := w.InitTargets(nil)
+			err1 := w.InitTargets()
 			So(err1, ShouldEqual, nil)
 		})
 
@@ -628,7 +628,7 @@ func TestWorker(t *testing.T) {
 			w.Paths = []string{"not-a-thing"}
 			err0 := w.Init()
 			wString0 := w.String()
-			err1 := w.InitTargets(nil)
+			err1 := w.InitTargets()
 			errData := string(errio.Data())
 			So(err0, ShouldEqual, nil)
 			So(wString0, ShouldEqual, `Worker{`+
@@ -673,7 +673,7 @@ func TestWorker(t *testing.T) {
 			go func() {
 				chdirs.MockBadWD()
 				defer chdirs.UnMockBadWD()
-				err1 = w.InitTargets(nil)
+				err1 = w.InitTargets()
 				errData = string(errio.Data())
 				wg.Done()
 				return
@@ -722,7 +722,7 @@ func TestWorker(t *testing.T) {
 			w.Paths = append(w.Paths, "_testing")
 			err0 := w.Init()
 			wString0 := w.String()
-			err1 := w.InitTargets(nil)
+			err1 := w.InitTargets()
 			err2 := w.FindMatching(nil)
 			outData := string(outio.Data())
 			errData := string(errio.Data())
@@ -767,7 +767,7 @@ func TestWorker(t *testing.T) {
 			w.Paths = append(w.Paths, "_testing/test.txt", "_testing/hello.html")
 			err0 := w.Init()
 			wString0 := w.String()
-			err1 := w.InitTargets(nil)
+			err1 := w.InitTargets()
 			outData := string(outio.Data())
 			errData := string(errio.Data())
 			So(err0, ShouldEqual, nil)
@@ -809,7 +809,7 @@ func TestWorker(t *testing.T) {
 			w.AddFile = []string{"_testing/files.list"}
 			err0 := w.Init()
 			wString0 := w.String()
-			err1 := w.InitTargets(nil)
+			err1 := w.InitTargets()
 			outData := string(outio.Data())
 			errData := string(errio.Data())
 			So(err0, ShouldEqual, nil)
@@ -854,7 +854,7 @@ func TestWorker(t *testing.T) {
 			w.AddFile = []string{tmpName}
 			err0 := w.Init()
 			wString0 := w.String()
-			err1 := w.InitTargets(nil)
+			err1 := w.InitTargets()
 			outData := string(outio.Data())
 			errData := string(errio.Data())
 			So(err, ShouldEqual, nil)
@@ -898,7 +898,7 @@ func TestWorker(t *testing.T) {
 			w.Paths = append(w.Paths, "_testing")
 			err := w.Init()
 			wString0 := w.String()
-			err1 := w.InitTargets(nil)
+			err1 := w.InitTargets()
 			err2 := w.FindMatching(nil)
 			outData := string(outio.Data())
 			errData := string(errio.Data())
@@ -943,7 +943,7 @@ func TestWorker(t *testing.T) {
 			w.Recurse = true
 			w.Paths = append(w.Paths, "_testing")
 			err := w.Init()
-			err1 := w.InitTargets(nil)
+			err1 := w.InitTargets()
 			err2 := w.FindMatching(nil)
 			outData := string(outio.Data())
 			errData := string(errio.Data())
@@ -989,7 +989,7 @@ _testing/test.txt`))
 			rpl.MaxFileCount = 1
 			w.Stdin = true
 			err := w.Init()
-			err1 := w.InitTargets(nil)
+			err1 := w.InitTargets()
 			outData := string(outio.Data())
 			errData := string(errio.Data())
 			So(err, ShouldEqual, nil)
@@ -1033,7 +1033,7 @@ _testing/test.txt`))
 			w.Stdin = true
 			w.Null = true
 			err := w.Init()
-			err1 := w.InitTargets(nil)
+			err1 := w.InitTargets()
 			outData := string(outio.Data())
 			errData := string(errio.Data())
 			So(err, ShouldEqual, nil)
@@ -1077,7 +1077,7 @@ _testing/test.txt`))
 		w.Replace = "olleh"
 		w.IgnoreCase = true
 		err := w.Init()
-		err1 := w.InitTargets(nil)
+		err1 := w.InitTargets()
 		err2 := w.FindMatching(nil)
 		outData := string(outio.Data())
 		errData := string(errio.Data())
