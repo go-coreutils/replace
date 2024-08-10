@@ -8,27 +8,8 @@ Command-line utility for searching and replacing text.
 
 ## INSTALLATION
 
-### Debian APT installation method
-
 ```shell
-> wget -c https://apt.go-curses.org/apt-go-curses-org_latest.deb
-> sudo dpkg -i ./apt-go-curses-org_latest.deb
-> sudo apt update
-> sudo apt install replace
-```
-
-### Brew installation method
-
-```shell
-# this is a "head-only" formula, to install:
-> brew install --HEAD go-curses/tap/replace
-# and to upgrade:
-> brew upgrade --fetch-HEAD replace
-```
-
-### Golang installation method
-
-```shell
+# note: requires Go v1.22.6
 > go install github.com/go-coreutils/replace/cmd/rpl@latest
 ```
 
