@@ -1,6 +1,6 @@
 module github.com/go-coreutils/replace
 
-go 1.21.6
+go 1.22.6
 
 require (
 	github.com/dustin/go-humanize v1.0.1
