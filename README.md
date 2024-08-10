@@ -24,7 +24,7 @@ USAGE:
    rpl [options] <search> <replace> [path...]
 
 VERSION:
-   v0.9.6 (trunk)
+   v0.10.0 (trunk)
 
 DESCRIPTION:
 
@@ -247,7 +247,6 @@ DESCRIPTION:
 
 
 GLOBAL OPTIONS:
-
    1. Case Sensitivity
 
    --ignore-case, -i    perform a case-insensitive search (plain or regex)
@@ -288,9 +287,7 @@ GLOBAL OPTIONS:
    --usage, -h        display command-line usage information
    --verbose, -v      verbose notices
    --version, -V      display the version
-
 ```
-
 
 ## LICENSE
 
