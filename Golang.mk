@@ -1,6 +1,6 @@
 #!/usr/bin/make --no-print-directory --jobs=1 --environment-overrides -f
 
-# Copyright (c) 2023  The Go-Enjin Authors
+# Copyright (c) 2024  The Go-Enjin Authors
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -16,7 +16,7 @@
 
 MAKEFILE_KEYS += GOLANG
 GOLANG_MK_FILE := Golang.mk
-GOLANG_MK_VERSION := v0.2.0
+GOLANG_MK_VERSION := v0.2.1
 GOLANG_MK_DESCRIPTION := globals, functions and internal targets
 
 .PHONY: __golang __deps __generate
@@ -68,6 +68,8 @@ BUILD_EXTRA_LDFLAGS += -X 'github.com/go-curses/cdk.IncludeLogLevels=true'
 endif
 
 _INTERNAL_BUILD_LOG_ ?= /dev/null
+
+all: help
 
 -include Golang.lib.mk
 -include Golang.cdk.mk
