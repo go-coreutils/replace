@@ -26,10 +26,10 @@ import (
 
 	"github.com/go-corelibs/notify"
 	rpl "github.com/go-corelibs/replace"
-	"github.com/go-curses/cdk"
-	"github.com/go-curses/cdk/env"
 	replace "github.com/go-coreutils/replace"
 	"github.com/go-coreutils/replace/ui"
+	"github.com/go-curses/cdk"
+	"github.com/go-curses/cdk/env"
 )
 
 var (

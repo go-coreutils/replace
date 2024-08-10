@@ -17,9 +17,9 @@ package ui
 import (
 	"github.com/urfave/cli/v2"
 
+	"github.com/go-coreutils/replace"
 	cenums "github.com/go-curses/cdk/lib/enums"
 	"github.com/go-curses/cdk/log"
-	"github.com/go-coreutils/replace"
 )
 
 // prepareStartup happens immediately upon cli action func

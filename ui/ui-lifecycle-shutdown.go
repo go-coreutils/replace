@@ -21,8 +21,8 @@ import (
 	"strings"
 
 	rpl "github.com/go-corelibs/replace"
-	cenums "github.com/go-curses/cdk/lib/enums"
 	replace "github.com/go-coreutils/replace"
+	cenums "github.com/go-curses/cdk/lib/enums"
 )
 
 // shutdown happens after the curses display screen is closed and the display itself shutdown, it is safe to use stdout
