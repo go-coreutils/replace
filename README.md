@@ -1,5 +1,6 @@
-[![Made with Go](https://img.shields.io/badge/go-v1.21+-blue.svg)](https://golang.org)
-[![Go Report Card](https://goreportcard.com/badge/github.com/go-coreutils/replace)](https://goreportcard.com/report/github.com/go-coreutils/replace)
+[![Go](https://img.shields.io/badge/Go-v1.22.4-blue.svg)](https://go.dev)
+[![GoDoc](https://img.shields.io/badge/godoc-reference-blue.svg)](https://pkg.go.dev/github.com/go-coreutils/replace)
+[![GoReportCard](https://goreportcard.com/badge/github.com/go-coreutils/replace)](https://goreportcard.com/report/github.com/go-coreutils/replace)
 
 # replace
 
