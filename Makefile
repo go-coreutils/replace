@@ -20,7 +20,7 @@
 -include .env
 
 BIN_NAME := rpl
-UNTAGGED_VERSION := v0.9.8
+UNTAGGED_VERSION := v0.10.0
 UNTAGGED_COMMIT := trunk
 
 SHELL := /bin/bash
