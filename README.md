@@ -1,4 +1,4 @@
-[![Go](https://img.shields.io/badge/Go-v1.22.4-blue.svg)](https://go.dev)
+[![Go](https://img.shields.io/badge/Go-v1.22.6-blue.svg)](https://go.dev)
 [![GoDoc](https://img.shields.io/badge/godoc-reference-blue.svg)](https://pkg.go.dev/github.com/go-coreutils/replace)
 [![GoReportCard](https://goreportcard.com/badge/github.com/go-coreutils/replace)](https://goreportcard.com/report/github.com/go-coreutils/replace)
 
