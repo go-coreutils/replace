@@ -1,5 +1,5 @@
 [![Made with Go](https://img.shields.io/badge/go-v1.21+-blue.svg)](https://golang.org)
-[![Go Report Card](https://goreportcard.com/badge/github.com/go-curses/coreutils-replace)](https://goreportcard.com/report/github.com/go-curses/coreutils-replace)
+[![Go Report Card](https://goreportcard.com/badge/github.com/go-coreutils/replace)](https://goreportcard.com/report/github.com/go-coreutils/replace)
 
 # replace
 
@@ -28,7 +28,7 @@ Command-line utility for searching and replacing text.
 ### Golang installation method
 
 ```shell
-> go install github.com/go-curses/coreutils-replace/cmd/rpl@latest
+> go install github.com/go-coreutils/replace/cmd/rpl@latest
 ```
 
 ## DOCUMENTATION

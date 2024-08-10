@@ -28,7 +28,7 @@ import (
 	"github.com/go-curses/cdk"
 	"github.com/go-curses/ctk"
 
-	replace "github.com/go-curses/coreutils-replace"
+	replace "github.com/go-coreutils/replace"
 )
 
 type ViewType uint8

@@ -14,8 +14,8 @@ import (
 	rpl "github.com/go-corelibs/replace"
 	"github.com/go-curses/cdk"
 	"github.com/go-curses/cdk/env"
-	replace "github.com/go-curses/coreutils-replace"
-	"github.com/go-curses/coreutils-replace/ui"
+	replace "github.com/go-coreutils/replace"
+	"github.com/go-coreutils/replace/ui"
 )
 
 var (

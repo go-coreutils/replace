@@ -1,4 +1,4 @@
-module github.com/go-curses/coreutils-replace
+module github.com/go-coreutils/replace
 
 go 1.21.6
 

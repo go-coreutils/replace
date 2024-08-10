@@ -653,7 +653,7 @@ func TestWorker(t *testing.T) {
 				`include=[];`+
 				`}`)
 			So(err1, ShouldEqual, nil)
-			So(errData, ShouldEqual, "# error: not found: \"/quo/src/github.com/go-curses/coreutils-replace/not-a-thing\"\n")
+			So(errData, ShouldEqual, "# error: not found: \"/quo/src/github.com/go-coreutils/replace/not-a-thing\"\n")
 		})
 
 		Convey("Target Invalid Path", func() {
